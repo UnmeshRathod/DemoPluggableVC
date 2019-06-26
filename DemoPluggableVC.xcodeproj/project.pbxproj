@@ -12,6 +12,10 @@
 		A612476C22C3801400660533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A612476A22C3801400660533 /* Main.storyboard */; };
 		A612476E22C3801600660533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A612476D22C3801600660533 /* Assets.xcassets */; };
 		A612477122C3801600660533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A612476F22C3801600660533 /* LaunchScreen.storyboard */; };
+		A612477A22C3816400660533 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612477922C3816400660533 /* LoadingViewController.swift */; };
+		A612477C22C3834100660533 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612477B22C3834100660533 /* Extensions.swift */; };
+		A612477E22C383D200660533 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612477D22C383D200660533 /* ListTableViewController.swift */; };
+		A612478222C385F400660533 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612478122C385F300660533 /* DataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A612476D22C3801600660533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A612477022C3801600660533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A612477222C3801600660533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A612477922C3816400660533 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A612477B22C3834100660533 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A612477D22C383D200660533 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		A612478122C385F300660533 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,34 @@
 		A612476522C3801400660533 /* DemoPluggableVC */ = {
 			isa = PBXGroup;
 			children = (
-				A612476622C3801400660533 /* AppDelegate.swift */,
-				A612476822C3801400660533 /* ViewController.swift */,
+				A612477F22C383D600660533 /* Support */,
+				A612477822C3815000660533 /* ChildVCs */,
 				A612476A22C3801400660533 /* Main.storyboard */,
-				A612476D22C3801600660533 /* Assets.xcassets */,
-				A612476F22C3801600660533 /* LaunchScreen.storyboard */,
+				A612477B22C3834100660533 /* Extensions.swift */,
+				A612477D22C383D200660533 /* ListTableViewController.swift */,
+				A612478122C385F300660533 /* DataLoader.swift */,
 				A612477222C3801600660533 /* Info.plist */,
 			);
 			path = DemoPluggableVC;
+			sourceTree = "<group>";
+		};
+		A612477822C3815000660533 /* ChildVCs */ = {
+			isa = PBXGroup;
+			children = (
+				A612477922C3816400660533 /* LoadingViewController.swift */,
+			);
+			path = ChildVCs;
+			sourceTree = "<group>";
+		};
+		A612477F22C383D600660533 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A612476622C3801400660533 /* AppDelegate.swift */,
+				A612476F22C3801600660533 /* LaunchScreen.storyboard */,
+				A612476D22C3801600660533 /* Assets.xcassets */,
+				A612476822C3801400660533 /* ViewController.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +165,10 @@
 			files = (
 				A612476922C3801400660533 /* ViewController.swift in Sources */,
 				A612476722C3801400660533 /* AppDelegate.swift in Sources */,
+				A612478222C385F400660533 /* DataLoader.swift in Sources */,
+				A612477A22C3816400660533 /* LoadingViewController.swift in Sources */,
+				A612477E22C383D200660533 /* ListTableViewController.swift in Sources */,
+				A612477C22C3834100660533 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WZ3H873AV;
 				INFOPLIST_FILE = DemoPluggableVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WZ3H873AV;
 				INFOPLIST_FILE = DemoPluggableVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
