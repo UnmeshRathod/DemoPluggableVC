@@ -16,6 +16,7 @@
 		A612477C22C3834100660533 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612477B22C3834100660533 /* Extensions.swift */; };
 		A612477E22C383D200660533 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612477D22C383D200660533 /* ListTableViewController.swift */; };
 		A612478222C385F400660533 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612478122C385F300660533 /* DataLoader.swift */; };
+		A61977882316884E00D2589A /* ErrorMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61977872316884E00D2589A /* ErrorMsgViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A612477B22C3834100660533 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A612477D22C383D200660533 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		A612478122C385F300660533 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		A61977872316884E00D2589A /* ErrorMsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMsgViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A612477922C3816400660533 /* LoadingViewController.swift */,
+				A61977872316884E00D2589A /* ErrorMsgViewController.swift */,
 			);
 			path = ChildVCs;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				A612476922C3801400660533 /* ViewController.swift in Sources */,
 				A612476722C3801400660533 /* AppDelegate.swift in Sources */,
+				A61977882316884E00D2589A /* ErrorMsgViewController.swift in Sources */,
 				A612478222C385F400660533 /* DataLoader.swift in Sources */,
 				A612477A22C3816400660533 /* LoadingViewController.swift in Sources */,
 				A612477E22C383D200660533 /* ListTableViewController.swift in Sources */,

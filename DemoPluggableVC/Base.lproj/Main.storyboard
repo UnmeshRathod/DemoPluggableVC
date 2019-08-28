@@ -18,21 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is inital controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxF-nr-vPw">
-                                <rect key="frame" x="94" y="321.5" width="187.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Pluggable ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxF-nr-vPw">
+                                <rect key="frame" x="50" y="155" width="275.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-oa-4d3">
+                                <rect key="frame" x="27.5" y="229" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXs-5N-fda">
+                                <rect key="frame" x="112.5" y="465" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="oIg-hD-uqF"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YN0-wg-uCv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CxF-nr-vPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qS-mw-5Pq"/>
-                            <constraint firstItem="CxF-nr-vPw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rzO-oK-zQM"/>
+                            <constraint firstItem="uXs-5N-fda" firstAttribute="top" secondItem="O5o-oa-4d3" secondAttribute="bottom" constant="20" id="Km3-I0-avQ"/>
+                            <constraint firstItem="O5o-oa-4d3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q21-jP-Bv6"/>
+                            <constraint firstItem="uXs-5N-fda" firstAttribute="centerX" secondItem="O5o-oa-4d3" secondAttribute="centerX" id="WJi-TH-kCj"/>
+                            <constraint firstItem="O5o-oa-4d3" firstAttribute="top" secondItem="CxF-nr-vPw" secondAttribute="bottom" constant="50" id="hGK-fX-xo4"/>
+                            <constraint firstItem="CxF-nr-vPw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="rzO-oK-zQM"/>
+                            <constraint firstItem="uXs-5N-fda" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="yaB-Yc-fPM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="H95-SY-II9"/>
+                    <connections>
+                        <outlet property="vcPickerView" destination="O5o-oa-4d3" id="nxK-sD-cEp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

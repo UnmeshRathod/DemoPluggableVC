@@ -8,9 +8,16 @@
 
 import UIKit
 
+enum TypeOfVC: String, CaseIterable {
+	case listView = "Sample ListView"
+	case errorView = "Sample ErrorView"
+}
+
 class ListTableViewController: UITableViewController {
 	private var sampleData: [String] = []
-	private var dataLoader = DataLoader()
+	var vcType: TypeOfVC = .listView
+
+	var errorMsgController: ErrorMsgViewController?
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -38,12 +45,40 @@ class ListTableViewController: UITableViewController {
 
 	private func loadItems() {
 		let loadingVC = LoadingViewController()
+
+		errorMsgController = ErrorMsgViewController()
+		errorMsgController?.type = .noItems
+		errorMsgController?.delegate = self
+
 		add(loadingVC)
 
-		dataLoader.loadItems { [weak self] items in
+		DataLoader.shared.loadItems { [weak self] items in
 			loadingVC.remove()
-			self?.sampleData = items
-			self?.tableView?.reloadData()
+
+			guard self != nil else { return }
+
+			switch self!.vcType {
+			case .listView:
+				self!.sampleData = items
+				self!.tableView?.reloadData()
+
+			case .errorView:
+				self!.add(self!.errorMsgController!)
+			}
 		}
+	}
+}
+
+extension ListTableViewController: ErrorMsgVCActionDelegate {
+	func okButtonClicked() {
+
+	}
+
+	func cancelButtonClicked() {
+
+	}
+
+	func viewDismissed() {
+		errorMsgController?.remove()
 	}
 }

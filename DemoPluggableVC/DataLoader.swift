@@ -14,10 +14,14 @@ protocol DataLoaderService: class {
 
 class DataLoader: DataLoaderService {
 
+	// Singleton object
+	static let shared = DataLoader()
+	private init() {}
+
 	func loadItems(completionHandler: @escaping(([String]) -> Void)) {
 		let sampleData = ["First", "Second", "Third", "Fourth"]
 
-		DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 			completionHandler(sampleData)
 			return
 		}
